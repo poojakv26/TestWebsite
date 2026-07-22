@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <title>Pooja – Projects & Accomplishments</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Layout foundation for sticky footer */
+        html, body {
+            height: 100%;
             margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
             background: #f5f5f5;
             color: #333;
         }
@@ -24,6 +31,7 @@
         }
 
         .container {
+            flex: 1; /* pushes footer to bottom */
             max-width: 900px;
             margin: 40px auto;
             padding: 0 20px;
@@ -51,24 +59,24 @@
         .project-title {
             font-size: 1.3rem;
             font-weight: bold;
+            margin-bottom: 5px;
         }
 
         .project-subtitle {
             color: #666;
             font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .project-description {
             margin-bottom: 10px;
         }
 
-        ul {
-            margin: 10px 0 0 20px;
-        }
-
         footer {
-            text-align: center;
-            padding: 30px;
             background: #333;
             color: #fff;
-            margin-top: 40px;
+            text-align: center;
+            padding: 25px;
         }
     </style>
 </head>
@@ -89,20 +97,26 @@
             <div class="project-card">
                 <div class="project-title">Project Name</div>
                 <div class="project-subtitle">Short description of the project</div>
-                <ul>
-                    <li>Key feature or accomplishment</li>
-                    <li>Tools/technologies used</li>
-                    <li>Impact or outcome</li>
-                </ul>
+                <p class="project-description">
+                    A brief explanation of what the project does, why it matters, and what makes it interesting.
+                </p>
+                <p class="project-description">
+                    Tools/Technologies: React, Supabase, Stripe
+                </p>
+                <p class="project-description">
+                    Outcome: Improved workflow efficiency by 30%.
+                </p>
             </div>
 
             <div class="project-card">
                 <div class="project-title">Another Project</div>
                 <div class="project-subtitle">Brief summary of what it does</div>
-                <ul>
-                    <li>Feature or highlight</li>
-                    <li>Tech stack</li>
-                </ul>
+                <p class="project-description">
+                    Description of the project’s purpose and key features.
+                </p>
+                <p class="project-description">
+                    Tech Stack: Python, FastAPI, PostgreSQL
+                </p>
             </div>
         </div>
 
@@ -113,13 +127,17 @@
             <div class="project-card">
                 <div class="project-title">Award or Achievement</div>
                 <div class="project-subtitle">Context or organization</div>
-                <p>Short explanation of what this accomplishment represents.</p>
+                <p class="project-description">
+                    Short explanation of what this accomplishment represents and why it’s meaningful.
+                </p>
             </div>
 
             <div class="project-card">
                 <div class="project-title">Milestone</div>
                 <div class="project-subtitle">Date or period</div>
-                <p>Description of the milestone and why it matters.</p>
+                <p class="project-description">
+                    Description of the milestone and its significance.
+                </p>
             </div>
         </div>
 
